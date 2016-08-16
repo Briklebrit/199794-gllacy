@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Gllacy Shop</title>
+        <link href="css/normalize.css" rel="stylesheet" media="screen" title="no title">
+        <link href="css/style.min.css" rel="stylesheet" media="screen" title="no title">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500&subset=cyrillic-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body class="body body--catalog">
+        <header class="main-header">
+            <div class="main-header-wrapper">
+                <div class="main-logo">
+                    <a href="index.html"><img class="header-logo" src="img/header-logo.svg" width="153" height="63" alt="Логотип магазина"></a>
+                </div>
+                <h2 class="off-screen">Главное меню сайта:</h2>
+                <nav class="main-nav">
+                    <ul class="site-nav">
+                        <li class="site-nav__item">
+                            <a class="site-nav__link site-nav__link--active-page">Каталог</a>
+                            <ul class="site-nav__sub-menu">
+                                <li class="sub-menu__item"><a class="sub-menu__item--new" href="#">Новинки</a></li>
+                                <li class="sub-menu__item"><a href="#">Сливочное</a></li>
+                                <li class="sub-menu__item"><a href="#">Щербеты</a></li>
+                                <li class="sub-menu__item"><a href="#">Фруктовый лед</a></li>
+                                <li class="sub-menu__item"><a href="#">Мелорин</a></li>
+                            </ul>
+                        </li>
+                        <li class="site-nav__item"><a class="site-nav__link" href="#">Доставка и оплата</a></li>
+                        <li class="site-nav__item"><a class="site-nav__link" href="#">О Компании</a></li>
+                    </ul>
+                    <h2 class="off-screen">Меню пользователя:</h2>
+                    <ul class="user-nav">
+                        <li class="user-nav__item"><a class="user-nav__link" href="#"><span class="sprite sprite-glass--white"></span><span class="off-screen">Поиск по сайту</span></a>
+                            <form class="user-nav__search" action="index.html" method="post">
+                                <input type="search" name="name" value="Что ищем?">
+                            </form>
+                        </li>
+                        <li class="user-nav__item"><a class="user-nav__link" href="#"><span class="sprite sprite-enter--white"></span>Вход</a>
+                            <form class="user-nav__enter" action="index.html" method="post">
+                                <input type="email" name="emale" value="Электронная почта">
+                                <input type="text" name="password" value="Пароль">
+                                <div class="user-nav__enter--wrapper">
+                                    <button class="btn btn-enter" type="submit" name="button-enter">Войти</button>
+                                    <div class="user-nav__help">
+                                        <a href="#">Забыли пароль?<span class="user-nav--bottom-line"></span></a>
+                                        <a href="#">Новая регистрация<span class="user-nav--bottom-line"></span></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="user-nav__item"><a class="user-nav__link basket-full" href="#"><span class="sprite sprite-basket--full "></span><span class="off-screen">Корзина:</span>2 товара</a>
+                            <div class="basket-entry__wrapper">
+                                <table class="basket-entry">
+                                    <tr class="basket-entry__item">
+                                        <td class="basket-entry__del"><span class="close-cross"></span></td>
+                                        <td class="basket-entry__icon"><span class="sprite sprite-ice-icon1"></span></td>
+                                        <td class="basket-entry__dscr">Пломбир с апельсиновым джемом</td>
+                                        <td class="basket-entry__sum-price">1,5 кг x <span class="basket-entry__sum-price--light">200 руб.</span></td>
+                                        <td class="basket-entry__sum-total">300 руб.</td>
+                                    </tr>
+                                    <tr class="basket-entry__item">
+                                        <td class="basket-entry__del"><span class="close-cross"></span></td>
+                                        <td class="basket-entry__icon"><span class="sprite sprite-ice-icon2"></span></td>
+                                        <td class="basket-entry__dscr">Клубничный пломбир с присыпкой из белого шоколада</td>
+                                        <td class="basket-entry__sum-price">1,5 кг x <span class="basket-entry__sum-price--light">200 руб.</span></td>
+                                        <td class="basket-entry__sum-total">450 руб.</td>
+                                    </tr>
+                                    <tr class="basket-entry__check">
+                                        <td class="basket-entry__check--total" colspan="5">Итого: 750 руб.</td>
+                                    </tr>
+                                </table>
+                                <button class="btn btn-basket-order" type="button" name="basket-order">Оформить заказ</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <h2 class="off-screen">Навигация по просмотренным страницам:</h2>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__item--link" href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item"><a>&raquo;</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__item--link" href="#">Каталог</a></li>
+                    <li class="breadcrumbs__item"><a>&raquo;</a></li>
+                    <li class="breadcrumbs__item"><a>Сливочное</a></li>
+                </ul>
+                <h2 class="off-screen">Контакты:</h2>
+                <p class="main-header__contacts">С 10 до 20, ежедневно<br><span class="main-header__contacts--large"> 8 812 450-25-25</span></p>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="main-content__wrapper">
+                <h1 class="catalog-title">Сливочное мороженое</h1>
+                <section class="filter">
+                    <h2 class="off-screen">Критерии выбора товара:</h2>
+                    <form class="filter__form" action="catalog.php" method="get">
+                        <div class="filter__sorting">
+                            <h3 class="filter__name">Сортировка:</h3>
+                            <select class="filter__sorting" name="sorting">
+                                <option value="popular">по популярности</option>
+                                <option value="chip">сначала недорогие</option>
+                                <option value="expensive">сначала дорогие</option>
+                                <option value="fatness">по жирности</option>
+                            </select>
+                        </div>
+                        <div class="filter__range">
+                            <h3 class="filter__name">Цена: 100 руб. - 500 руб.</h3>
+                            <div class="filter__range-scale">
+                                <div class="filter__range-bar"></div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
+                        </div>
+                        <div class="filter__fatness">
+                            <h3 class="filter__name">Жирность:</h3>
+                            <ul class="filter__fatness-list">
+                                <li class="filter__fatness-item">
+                                    <label>
+                                        <input type="radio" name="fatness" value="0"><span class="radio-indicator"></span>0%
+                                    </label>
+                                </li>
+                                <li class="filter__fatness-item">
+                                    <label>
+                                        <input type="radio" name="fatness" value="10%" checked><span class="radio-indicator"></span>до 10%
+                                    </label>
+                                </li>
+                                <li class="filter__fatness-item">
+                                    <label>
+                                        <input type="radio" name="fatness" value="30%"><span class="radio-indicator"></span>до 30%
+                                    </label>
+                                </li>
+                                <li class="filter__fatness-item">
+                                    <label>
+                                        <input type="radio" name="fatness" value=">30%"><span class="radio-indicator"></span>выше 30%
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter__stuff">
+                            <h3 class="filter__name">Наполнители:</h3>
+                            <ul class="filter__stuff-list">
+                                <li class="filter__stuff-item">
+                                    <label>
+                                        <input type="checkbox" name="stuff" checked><span class="checkbox-indicator"></span>шоколадные
+                                    </label>
+                                </li>
+                                <li class="filter__stuff-item">
+                                    <label>
+                                        <input type="checkbox" name="stuff" checked><span class="checkbox-indicator"></span>сахарные присыпки
+                                    </label>
+                                </li>
+                                <li class="filter__stuff-item">
+                                    <label>
+                                        <input type="checkbox" name="stuff"><span class="checkbox-indicator"></span>фрукты
+                                    </label>
+                                </li>
+                                <li class="filter__stuff-item">
+                                    <label>
+                                        <input type="checkbox" name="stuff"><span class="checkbox-indicator"></span>сиропы
+                                    </label>
+                                </li>
+                                <li class="filter__stuff-item">
+                                    <label>
+                                        <input type="checkbox" name="stuff"><span class="checkbox-indicator"></span>джемы
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <input class="btn btn-filter" type="submit" name="btn-filter" value="Применить">
+                    </form>
+                </section>
+                <section class="offer">
+                    <h2 class="off-screen">Хиты продаж:</h2>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-hit-img1.png" width="267" height="267" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
+                            <div class="offer__price">
+                                <span class="offer__price--large">310</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a  class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-hit-img2.png" width="267" height="267" alt="Фото сливочно-кофейного мороженого с кусочками шоколада">
+                            <div class="offer__price">
+                                <span class="offer__price--large">380</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочно-кофейное с кусочками шоколада</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-hit-img3.png" width="267" height="267" alt="Фото сливочно-клубничного мороженого с присыпкой из белого шоколада">
+                            <div class="offer__price">
+                                <span class="offer__price--large">355</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочно-клубничное с<br> присыпкой из белого шоколада</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-hit-img4.png" width="267" height="267" alt="Фото сливочного крем-брюле с карамельной подливкой">
+                            <div class="offer__price">
+                                <span class="offer__price--large">415</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное крем-брюле с карамельной подливкой</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img5.png" width="267" height="267" alt="Фото сливочного мороженого с брусничным джемом">
+                            <div class="offer__price">
+                                <span class="offer__price--large">325</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с брусничным<br> джемом</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img6.png" width="267" height="267" alt="Фото сливочно-черничного мороженого с цельными ягодами черники">
+                            <div class="offer__price">
+                                <span class="offer__price--large">410</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочно-черничное с цельными ягодами черники</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img7.png" width="267" height="267" alt="Фото сливочно-лимонного мороженого с карамельной присыпкой">
+                            <div class="offer__price">
+                                <span class="offer__price--large">375</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочно-лимонное с карамельной присыпкой </span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img8.png" width="267" height="267" alt="Фото сливочного мороженого с шоколадной стружкой">
+                            <div class="offer__price">
+                                <span class="offer__price--large">320</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с шоколадной стружкой</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img9.png" width="267" height="267" alt="Фото сливочно-ванильного мороженого с кусочками шоколада">
+                            <div class="offer__price">
+                                <span class="offer__price--large">440</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочно-ванильное с кусочками шоколада</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img10.png" width="267" height="267" alt="Фото сливочного мороженого с минтоловым сиропом">
+                            <div class="offer__price">
+                                <span class="offer__price--large">435</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с минтоловым сиропом</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img11.png" width="267" height="267" alt="Фото сливочного мороженого с кусочками черного шоколада">
+                            <div class="offer__price">
+                                <span class="offer__price--large">355</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с кусочками черного шоколада</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article class="offer__item">
+                        <div class="offer__hover">
+                            <a class="btn btn-offer__hover" href="#">Быстрый просмотр</a>
+                        </div>
+                        <div class="offer__wrapper">
+                            <img src="img/offer-img12.png" width="267" height="267" alt="Фото сливочного мороженого с мятным сиропом">
+                            <div class="offer__price">
+                                <span class="offer__price--large">420</span>
+                                <span class="off-screen">р</span>
+                                <span class="sprite sprite-ruble"></span>
+                                <span class="offer__price--small">/кг</span>
+                            </div>
+                            <h3 class="offer__title">
+                                <a class="offer__link" href="#"><span class="offer__link--bottom-line">Сливочное с мятным сиропом</span></a>
+                            </h3>
+                        </div>
+                    </article>
+                </section>
+                <div class="pagination">
+                    <ul class="pagination__list">
+                        <li class="pagination__item"><a class="pagination__link previous-page"></a></li>
+                        <li class="pagination__item"><a class="pagination__link pagination__link--active-page">1</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                        <li class="pagination__item"><a class="pagination__link next-page" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <h2 class="off-screen">ССылки на страницы компании в социальных сетях:</h2>
+            <ul class="main-footer__social">
+                <li class="social-network-link"><a href="#"><span class="sprite sprite-twitter"></span><span class="off-screen" lang="en">Twitter</span></a></li>
+                <li class="social-network-link"><a href="#"><span class="sprite sprite-insta"></span><span class="off-screen" lang="en">Instagram</span></a></li>
+                <li class="social-network-link"><a href="#"><span class="sprite sprite-fb"></span><span class="off-screen" lang="en">Facebook</span></a></li>
+                <li class="social-network-link"><a href="#"><span class="sprite sprite-vk"></span><span class="off-screen">В контакте</span></a></li>
+            </ul>
+            <div class="main-footer__about-company">
+                <h2 class="off-screen">Сведения о компании:</h2>
+                <ul class="main-footer__about-manufacture">
+                    <li><span class="sprite sprite-heart"></span><a href="#">Для поставщиков</a></li>
+                    <li><a href="#">О производстве</a></li>
+                </ul>
+                <ul class="main-footer__regulations">
+                    <li><a href="#">Наши документы</a></li>
+                    <li><a href="#">Экологические стандарты</a></li>
+                </ul>
+            </div>
+            <div class="site-developer">
+                <p>Сделано в <a class="site-developer__link" href="#" lang="en">HTML Academy</a> &copy; 2016</p>
+            </div>
+        </footer>
+    </body>
+</html>
