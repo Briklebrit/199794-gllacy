@@ -20,7 +20,7 @@
                             <a class="site-nav__link site-nav__link--active-page">Каталог</a>
                             <ul class="site-nav__sub-menu">
                                 <li class="sub-menu__item"><a class="sub-menu__item--new" href="#">Новинки</a></li>
-                                <li class="sub-menu__item"><a href="#">Сливочное</a></li>
+                                <li class="sub-menu__item"><a class="sub-menu__item--active" href="#">Сливочное</a></li>
                                 <li class="sub-menu__item"><a href="#">Щербеты</a></li>
                                 <li class="sub-menu__item"><a href="#">Фруктовый лед</a></li>
                                 <li class="sub-menu__item"><a href="#">Мелорин</a></li>
@@ -95,7 +95,7 @@
                     <form class="filter__form" action="catalog.php" method="get">
                         <div class="filter__sorting">
                             <h3 class="filter__name">Сортировка:</h3>
-                            <select class="filter__sorting" name="sorting">
+                            <select class="filter__sorting-list" name="sorting">
                                 <option value="popular">по популярности</option>
                                 <option value="chip">сначала недорогие</option>
                                 <option value="expensive">сначала дорогие</option>
@@ -168,7 +168,7 @@
                         <input class="btn btn-filter" type="submit" name="btn-filter" value="Применить">
                     </form>
                 </section>
-                <section class="offer">
+                <section class="offer clearfix">
                     <h2 class="off-screen">Хиты продаж:</h2>
                     <article class="offer__item">
                         <div class="offer__hover">
